@@ -9,8 +9,7 @@ import io.flutter.embedding.engine.plugins.activity.ActivityPluginBinding
 class FlutterVideoCastPlugin: FlutterPlugin, ActivityAware {
   private lateinit var chromeCastFactory: ChromeCastFactory
 
-  @Override
-  fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
+  override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
     chromeCastFactory = ChromeCastFactory(flutterPluginBinding.binaryMessenger)
     flutterPluginBinding
             .platformViewRegistry
